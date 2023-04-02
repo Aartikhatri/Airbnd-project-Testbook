@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Kanit:wght@300&family=Lato:wght@100&family=PT+Serif&family=Playfair+Display&family=Satisfy&display=swap");
+
+:root{
+    --grey : #ddd;
+    --black : #000;
+    --white : #ffffff;
+    --font-grey : #717171;
+    --theme : #ff385c;
+    --light-grey : #f7f7f7;
+}
+
+body{
+    margin: 0;
+    font-family: "Nunito Sans" , sans-serif;
+    /* -webkit-font-smoothing: "antialised";
+    -moz-osx-font-smoothing : "greyscale" ; */
+}

@@ -1,0 +1,150 @@
+<%- include('./partials/header.ejs') %>
+
+
+    
+
+<section class="container ">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="../../../images/longLogo.jpg" alt="photo" style="height: 4rem;width: 8rem;" srcset="">
+      </div>
+      <div class="navCenter ">
+        <div class="search-text">Any Where</div>
+        <div class="search-text">Any Week</div>
+        <div class="search-text2">Add Guest</div>
+        <div class="search-icon-div"> <i class="fa-solid fa-magnifying-glass"></i></div>
+      </div>
+  
+      <div class="nav-right">
+       <a href="/airbnbYourHome"> <div class="airbnd-your-home">Airbnd your home</div></a>
+        <div class="airbnd-your-home"><i class="fa-solid fa-globe"></i></div>
+        <div class="user-login">
+          <div class="dropdown btn-group dropstart ">
+            <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown button
+                  </button> -->
+            <div class="dropdown-toggle user-profile-div " type="button" data-bs-toggle="dropdown" aria-expanded="true">
+              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-user user-image-icon "></i>
+            </div>
+            <ul class=" user-menu-list  dropdown-menu">
+              <li><a class="dropdown-item" href="">Already Signed Up</a></li>
+              <li><a class="dropdown-item" href="/">Logout</a></li>
+              <div style="height: 1px; background-color: var(--grey); width: 100%;"></div>
+              <li><a class="dropdown-item" href="/airbnbYourHome">Airbnd your home</a></li>
+              <li><a class="dropdown-item" href="#">Host an experience</a></li>
+              <li><a class="dropdown-item" href="#">Help</a></li>
+  
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  
+
+
+        <%- include('./partials/filetrCategoryBar.ejs') %>
+
+        <!-- login msg -->
+        <div>
+
+
+            <p style=" text-align: center;  font-family: Nunito Sans , sans-serif; font-weight: 700;">
+                <%= msg %>
+
+            </p>
+
+        </div >
+
+
+
+
+         <div class="main-card-div d-flex container ">
+                 
+                <% data.forEach((item)=> { %>
+
+
+             
+
+                <div style="width: auto;">
+
+                    <div class="card mt-2 mx-2 rounded-4" style="width: 17rem; border: none;">
+
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    
+                        
+                                    <form  method="get" action="/homepage2/bookingPage/<%= item._id %>"> 
+                                        <button type="submit" style="border: none;" >
+                                            <img src="../../../hotels-image/<%= item.image %>" class="d-block w-100 rounded-4"
+                                            style="height: 18rem;" alt="...">
+                                        </button>
+                                    </form>
+
+                                
+                                   
+                                </div>
+                                <!-- <div class="carousel-item">
+                                    <img src="../../../hotels-image/<%item.image %>" class="d-block w-100 rounded-4"
+                                        style="height: 18rem;" alt="...">
+                                </div> -->
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+
+                        <div class="d-flex">
+
+                          <div class="card-body p-1">
+                              <h5 class="card-title"><%= item.location %></h5>
+                              <p class="card-list m-0"> <%= item.area %>
+                                  <br> Date <%= item.date %>
+                                  <br> <b style="color: var(--black);">₹<%= item.price %></b> night
+                              </p>
+  
+  
+                          </div>
+
+                          <div class="dropdown btn-group dropstart ">
+     
+                            <div class=" three-dot-div " type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                            <ul class="  dropdown-menu">
+
+                              <form action="/homepage2/edit/<%= item._id %>" method="get" >
+                              <button type="submit" class="remove-button-style">   <li><a class="dropdown-item" >Update</a></li></button>
+                              </form>
+
+                              <form action="/homepage2/delete/<%= item._id %>" method="post" >
+                               <button type="submit" class="remove-button-style"> <li><a class="dropdown-item" >Delete</a></li></button>
+                              </form>
+
+
+                            </ul>
+                          </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+               <%  }) %>
+         </div>
+
+    
+
+            <%- include('./partials/bottomNav.ejs') %>
+            <%- include('./partials/footer.ejs') %>

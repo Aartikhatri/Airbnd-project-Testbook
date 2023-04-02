@@ -1,0 +1,68 @@
+<%- include('./partials/header.ejs') %>
+
+
+    <%- include('./partials/navbar.ejs') %>
+
+
+        <%- include('./partials/filetrCategoryBar.ejs') %>
+           
+    
+
+        <div class="main-card-div d-flex container ">
+        <% data.forEach((item)=> { %>
+
+        <div style="width: auto;">
+
+          <div class="card mt-2 mx-2 rounded-4 mb-2" style="width: 17rem; border: none;">
+
+              <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          
+              
+                          <form  method="get" action="/homepage2/bookingPage/<%= item._id %>"> 
+                              <button type="submit" style="border: none;" >
+                                  <img src="../../../hotels-image/<%= item.image %>" class="d-block w-100 rounded-4"
+                                  style="height: 18rem;" alt="...">
+                              </button>
+                          </form>
+
+                      
+                         
+                      </div>
+                  
+
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+
+
+              <div class="card-body p-1">
+                  <h5 class="card-title"><%= item.location %></h5>
+                  <p class="card-list m-0"> <%= item.area %>
+                      <br> Date <%= item.date %>
+                      <br> <b style="color: var(--black);">₹<%= item.price %></b> night
+                  </p>
+
+
+              </div>
+          </div>
+
+      </div>
+
+      <%  }) %>
+    </div>
+
+      
+ 
+         <%- include('./partials/bottomNav.ejs') %>
+       <%- include('./partials/footer.ejs') %>

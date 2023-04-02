@@ -1,0 +1,108 @@
+<%- include('./partials/header.ejs') %>
+
+
+  <section class="container ">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="../../../images/longLogo.jpg" alt="photo" style="height: 4rem;width: 8rem;" srcset="">
+      </div>
+
+
+      <div class="nav-right">
+        <div class="chat-with-host-div">Chat with a Superhost</div>
+      </div>
+    </nav>
+  </section>
+
+  <section class="container mt-5">
+
+    <div class="airbnbContent-div mt-5 d-flex ">
+
+      <div class="airbnbYourHome-left mx-5 my-3 ">
+
+        <div class="">
+
+          <h1 style="color: var(--theme); font-family: Nunito Sans , sans-serif ; font-weight: 800;">Airbnd it.</h1>
+          <h1>You could Earn</h1>
+          <h2 style="font-size: 5rem;">₹12,589</h2>
+          <div> <b>11 nights</b> at an estimated ₹1,809 a nigh</div>
+          <hr>
+          <p style="color: var(--font-grey); font-weight: 500;"> Learn how we estimate your earnings</p>
+
+          <div class="form-outline">
+            <input type="text" id="formControlLg" class="form-control form-control-lg rounded-pill border-dark"
+              placeholder="Bhopal" />
+          </div>
+        </div>
+
+        <!--Airbnb setup button -->
+        <button type="submit" class=" btn btn-primary btn-block SignIN-btn  mt-4"> <i
+            class="fa-solid fa-house-chimney"></i> &nbsp; Airbnb setup</button>
+
+      </div>
+
+      <div class="airbnbYourHome-right ms-3">
+
+        <section class="container p-5 ">
+
+          <!-- login form start -->
+          <div class="login-register-div">
+
+
+            <h1 style="font-family: Nunito Sans , sans-serif; font-weight: 800; ">Set your place to
+              <span style="color: var(--theme); font-family: Nunito Sans , sans-serif ; font-weight: 800;">
+                Airbnb</span>
+            </h1>
+
+            <form method="post" enctype="multipart/form-data" action="/setPlace">
+
+              <div class="form-outline mt-2 ">
+                <input type="text" id="form12" class="form-control-lg" placeholder="Enter your location"
+                  name="location" />
+              </div>
+
+              <div class="form-outline mt-2 ">
+                <input type="text" id="form12" class="form-control-lg " placeholder="Area " name="area" />
+              </div>
+
+              <div class="form-outline mt-2 ">
+                <input type="text" id="form12" class="form-control-lg " placeholder="date" name="date" />
+              </div>
+
+              <div class="form-outline mt-2 ">
+                <input type="number" id="form12" class="form-control-lg " placeholder="price" name="price" />
+              </div>
+
+              <div class="form-outline mt-2 ">
+                <input type="text" id="form12" class="form-control-lg " placeholder="Hosted by" name="hostby" />
+              </div>
+
+              <div class="form-outline mt-2 ">
+                <input type="text" id="form12" class="form-control-lg " placeholder="Villa name" name="villaName" />
+              </div>
+
+              <div class="my-3">
+                <input class="form-control" type="file" id="formFileMultiple" multiple name="images">
+              </div>
+
+
+              <!-- continue button -->
+              <button type="submit" class="btn btn-primary btn-block SignIN-btn w-50">Add to Airbnb</button>
+              <hr>
+
+
+
+              <!-- Submit button -->
+            </form>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+
+    </div>
+
+  </section>

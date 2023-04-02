@@ -1,0 +1,194 @@
+<%- include('./partials/header.ejs') %>
+
+
+    <%- include('./partials/navbar.ejs') %>
+
+        <div class="container mt-4">
+
+            <div>
+
+                <% data2.forEach((item)=> { %>
+
+                    <div class="card text-center">
+                        <div class="mt-2">
+                            <b> Get ₹3000 OFF</b> <span>using Citybank Card</span>
+                        </div>
+                        <hr>
+                        <div class="card-body">
+                            <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../../../hotels-image/<%= item.image %>"
+                                            style="width: 35rem; height: 25rem; align-items:center;" class=" rounded-4"
+                                            style="height: 18rem;" alt="...">
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <h5 class="card-title mt-3" style="font-family: Nunito sans , sans-serif;">Best Place to
+                                Book your hotel</h5>
+
+
+                            <div class="container mt-4">
+
+                                <div class="bookingDetails-div  d-flex">
+
+
+                                    <div class="booking-left-content" style="text-align: left !important ;">
+
+                                        <h4 class="font">
+                                            <%= item.villaName %> hosted by <%= item.hostby %>
+                                        </h4>
+                                        <div class="text-left"> 8 guests, 3 bedrooms,
+                                            5 beds, 2 bathrooms </div>
+                                        <hr>
+
+                                        <div style="text-align: left !important ; " class="my-4">
+                                            <div><i class="fa-solid fa-circle-info"></i> &nbsp; <b
+                                                    class="font"><%= item.hostby %> is a
+                                                    Superhost</b> <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Superhosts are experienced, highly rated
+                                                hosts who are committed to
+                                                providing <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; great stays for their guests.
+                                            </div>
+                                        </div>
+                                        <div style="text-align: left !important ; " class="my-2">
+                                            <div><i class="fa-solid fa-key"></i> &nbsp; <b class="font">Great check-in
+                                                    experience</b>
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100% of recent guests gave the check-in
+                                                process a 5-star rating.
+                                            </div>
+                                        </div>
+                                        <hr>
+
+
+
+                                        <div>
+                                            <h4 class="font">What this place offers</h4>
+                                            <div class="row mt-4 ">
+                                                <div class="col "><i class="fa-solid fa-wifi"></i> <span> &nbsp;&nbsp;
+                                                        Wifi</span> </div>
+                                                <div class="col"><i class="fa-solid fa-tv"></i> <span> &nbsp;&nbsp;
+                                                        HDTV</span></div>
+                                            </div>
+
+                                            <div class="row mt-4 ">
+                                                <div class="col "><i class="fa-solid fa-kitchen-set"></i> <span>
+                                                        &nbsp;&nbsp; Kitchen</span> </div>
+                                                <div class="col"><i class="fa-solid fa-car"></i> <span> &nbsp;&nbsp;
+                                                        Free parking on premises</span></div>
+                                            </div>
+
+                                            <div class="row mt-4 ">
+                                                <div class="col "><i class="fa-solid fa-hot-tub-person"></i></i> <span>
+                                                        &nbsp;&nbsp; Private hot tub</span> </div>
+                                                <div class="col"><i class="fa-solid fa-snowflake"></i><span>
+                                                        &nbsp;&nbsp; AC – split-type ductless system</span></div>
+                                            </div>
+                                            <div class="row mt-4 ">
+                                                <div class="col "><i class="fa-solid fa-fire-extinguisher"></i> <span>
+                                                        &nbsp;&nbsp; Fire extinguisher</span> </div>
+                                                <div class="col"><i class="fa-solid fa-kit-medical"></i> <span>
+                                                        &nbsp;&nbsp; First aid kit</span></div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+
+                                    <div class="booking-right-content ">
+
+                                        <div class="card-body p-1">
+                                            <h5 class="font">Welcome to your dream Luxury Villa</h5>
+
+
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Best place at <b class="card-title">
+                                                        <%= item.location %>
+                                                    </b></li>
+                                                <li class="list-group-item"> Beautiful Place near to <b>
+                                                        <%= item.area %>
+                                                    </b></li>
+                                                <li class="list-group-item">Available-Date <b>
+                                                        <%= item.date %>
+                                                    </b> </li>
+                                                <li class="list-group-item"><b style="color: var(--black);">₹<%=
+                                                            item.price %></b> night per person</li>
+
+                                            </ul>
+
+                                        </div>
+                                        <hr>
+
+                                        <div style="text-align: left !important ; " class="mb-3">
+                                            <div style="font-weight: 200; font-size: smaller;">
+                                                CANCELLATION POLICIES
+                                            </div>
+
+                                            <div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <input class="form-check-input me-1" type="radio"
+                                                            name="listGroupRadio" value="" id="firstRadio" checked>
+                                                        <label class="form-check-label" for="firstRadio">Non-refundable
+                                                            · ₹1,09,001 total</label>
+                                                    </li>
+                                                    <li class="list-group-item ">
+                                                        <input class="form-check-input me-1" type="radio"
+                                                            name="listGroupRadio" value="" id="secondRadio">
+                                                        <label class="form-check-label" for="secondRadio">Refundable ·
+                                                            ₹1,21,112 total</label>
+                                                        <br>
+                                                        <div style="font-weight: 200; font-size: 0.7rem;">Free
+                                                            cancellation for 48 hours. Cancel before 8 Apr <br> for a
+                                                            partial refund</div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+
+                                        <a href="" class="btn SignIN-btn text-light ">Book Now</a>
+                                        <div style="color: var(--font-grey);" class="mt-2"> You won't be charged yet
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="mb-3">
+                            <hr>
+                            Superhost
+                        </div>
+                    </div>
+
+                    <% }) %>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <%- include('./partials/bottomNav.ejs') %>
+            <%- include('./partials/footer.ejs') %>
