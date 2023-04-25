@@ -23,6 +23,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = process.env.PORT || 3000;
+const URL = process.env.DATABASE_URL;
+const DBS = process.env.DATABASE_NAME
 
 // connect-mongo to seesion , session data sended to the database;
 const storage = mongoStore.create({
@@ -45,7 +47,7 @@ app.use(session({
 app.use(flash());
 
 // calling database
-DbConnection();
+DbConnection( URL , DBS);
 
 
 // parsing data to readable form

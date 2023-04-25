@@ -1,10 +1,9 @@
-import dotenv from 'dotenv' ;
-dotenv.config();
+
 import mongoose from "mongoose";
 
-const DbConnection = async()=>{
+const DbConnection = async(url , Dname)=>{
     try{
-   await mongoose.connect(`${process.env.DATABASE_URL}${process.env.DATABASE_NAME}` , {
+   await mongoose.connect(`${url}${Dname}` , {
     useUnifiedTopology: true,
     useNewUrlParser: true
    } );
